@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'login/css/style.css'%}">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                     <h1>Assalomu Alaykum Bizning Kanalga Hush Kelibsz</h1>
+                        <h2>Ushbu Saytdan qanday foydalanasiz </br> Kitob Joylayszmi   yoki Yuklab Olasizmi</h2>
+                        <a style="border:2px solid black; margin-right:10px; padding:8px;" href="/kirish/" > Yuklab olish</a>
+                        <a style="border:2px solid black; margin-left:10px; padding:8px;" href="/login/" > Saytga Yuklash </a>
+                    </div>
+
+
+
+
+
+
+                    <div class="signup-image">
+                      <figure><img src="{% static 'login/images/signup-image.jpg'%}" alt="sing up image"></figure>
+                       <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
+               </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'login/vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'login/js/main.js'%}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

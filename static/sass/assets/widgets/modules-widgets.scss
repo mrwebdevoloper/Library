@@ -1,0 +1,824 @@
+//  =================
+//      Imports
+//  =================
+
+@import '../../base/base';    // Base Variables
+
+/*
+    ===============================
+    /|\                         /|\
+    /|\                         /|\
+    /|\    Analytics Section    /|\
+    /|\                         /|\
+    /|\                         /|\
+    ===============================
+*/
+
+.layout-spacing {
+  padding-bottom: 25px;
+}
+
+.widget {
+  position: relative;
+  padding: 0;
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  box-shadow: 0 3px 8px 0 rgba(85, 85, 85, 0.08), 0 1px 0px 0 rgba(0, 0, 0, 0.07), 0px 1px 4px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.1px 0px rgba(0, 0, 0, 0.002), 0 0.2px 0px rgba(0, 0, 0, 0.003), 0 0.4px 0px rgba(0, 0, 0, 0.004), 0 0.6px 0px rgba(0, 0, 0, 0.004), 0 0.9px 0px rgba(0, 0, 0, 0.005), 0 1.2px 0px rgba(0, 0, 0, 0.006), 0 1.8px 0px rgba(0, 0, 0, 0.006), 0 2.6px 0px rgba(0, 0, 0, 0.007), 0 3.9px 0px rgba(0, 0, 0, 0.008), 0 7px 0px rgba(0, 0, 0, 0.01);
+}
+
+.apexcharts-xaxis text, .apexcharts-yaxis text {
+  fill: $m-color_6;
+}
+
+.apexcharts-legend-text {
+  color: $m-color_4 !important;
+}
+
+.apexcharts-tooltip.dark {
+  background: $m-color_18 !important;
+  box-shadow: none;
+
+  .apexcharts-tooltip-title {
+    background: $m-color_18 !important;
+    border-bottom: 1px solid $m-color_18;
+  }
+}
+
+
+/*
+    =====================
+        User Analytics
+    =====================
+*/
+
+.widget {
+  &.widget-chart-three {
+    background: $m-color_10;
+    padding: 0;
+
+    .widget-heading {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed $dark;
+      padding: 20px 20px;
+      margin-bottom: 0;
+      padding-bottom: 20px;
+
+      h5 {
+        font-size: 17px;
+        display: block;
+        color: $m-color_3;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .dropdown {
+        align-self: center;
+
+        a svg {
+          color: $m-color_6;
+          width: 19px;
+          height: 19px;
+        }
+
+        .dropdown-menu {
+          min-width: 10rem;
+          border-radius: 6px;
+          transform: translate3d(-142px, 0, 0px);
+        }
+      }
+    }
+
+    .apexcharts-legend-marker {
+      left: -5px !important;
+    }
+
+    #uniqueVisits {
+      overflow: hidden;
+    }
+  }
+
+  &.widget-activity-five {
+    position: relative;
+    background: $m-color_10;
+    border-radius: 6px;
+    height: 100%;
+    padding: 0;
+
+    .widget-heading {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed $dark;
+      padding: 20px 20px;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+
+      h5 {
+        font-size: 17px;
+        display: block;
+        color: $m-color_3;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .task-action {
+        svg {
+          color: $m-color_6;
+          width: 19px;
+          height: 19px;
+        }
+
+        .dropdown-menu {
+          transform: translate3d(-141px, 0, 0px);
+        }
+      }
+    }
+  }
+}
+
+/*
+    =====================
+        Unique Visitors
+    =====================
+*/
+
+/*
+    =========================
+        Organic Vs Direct
+    =========================
+*/
+
+/*
+    ========================
+        Recent Activities
+    ========================
+*/
+
+.widget-activity-five {
+  .widget-content {
+    padding: 12px 10px 21px 20px;
+  }
+
+  .w-shadow-top {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: 17px;
+    width: 97%;
+    pointer-events: none;
+    margin-top: -10px;
+    left: 2px;
+    -webkit-filter: blur(9px);
+    filter: blur(9px);
+    background: -webkit-linear-gradient(180deg, $m-color_10 44%, #0e1726d1 73%, #2C303C00);
+    background: linear-gradient(180deg, $m-color_10 44%, #0e1726d1 73%, #2C303C00);
+  }
+
+  .w-shadow-bottom {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: 17px;
+    width: 97%;
+    pointer-events: none;
+    margin-top: -3px;
+    left: 2px;
+    -webkit-filter: blur(9px);
+    filter: blur(9px);
+    background: -webkit-linear-gradient(180deg, $m-color_10 44%, #0e1726d4 73%, #2C303C00);
+    background: linear-gradient(180deg, $m-color_10 44%, #0e1726d4 73%, #2C303C00);
+  }
+
+  .mt-container {
+    position: relative;
+    height: 332px;
+    overflow: auto;
+    padding: 15px 12px 0 12px;
+  }
+
+  .timeline-line .item-timeline {
+    display: flex;
+    margin-bottom: 35px;
+
+    .t-dot {
+      position: relative;
+
+      div {
+        background: transparent;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 11px;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        width: 32px;
+
+        &.t-primary {
+          background-color: $primary;
+
+          svg {
+            color: $l-primary;
+          }
+        }
+
+        &.t-secondary {
+          background-color: $secondary;
+
+          svg {
+            color: $l-secondary;
+          }
+        }
+
+        &.t-success {
+          background-color: $m-color_14;
+
+          svg {
+            color: $l-success;
+          }
+        }
+
+        &.t-danger {
+          background-color: $danger;
+
+          svg {
+            color: $l-danger;
+          }
+        }
+
+        &.t-warning {
+          background-color: $warning;
+
+          svg {
+            color: $l-warning;
+          }
+        }
+
+        &.t-dark {
+          background-color: $dark;
+
+          svg {
+            color: $l-dark;
+          }
+        }
+      }
+
+      svg {
+        color: #fff;
+        height: 15px;
+        width: 15px;
+        align-self: center;
+      }
+    }
+
+    .t-content {
+      width: 100%;
+
+      .t-uppercontent {
+        display: flex;
+        justify-content: space-between;
+
+        h5 {
+          font-size: 14px;
+          letter-spacing: 0;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+
+        span {
+          margin-bottom: 0;
+          font-size: 13px;
+          font-weight: 600;
+          color: $m-color_14;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: $m-color_6;
+
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .t-dot:after {
+      content: '';
+      position: absolute;
+      border-width: 1px;
+      border-style: solid;
+      left: 39%;
+      transform: translateX(-50%);
+      border-color: $dark;
+      width: 0;
+      height: auto;
+      top: 45px;
+      bottom: -23px;
+      border-right-width: 0;
+      border-top-width: 0;
+      border-bottom-width: 0;
+      border-radius: 0;
+    }
+
+    &:last-child .t-dot:after {
+      display: none;
+    }
+  }
+}
+
+
+
+
+@import '_modules-widgets/_modules-widget-card-four';
+@import '_modules-widgets/_modules-widget-chart-three';
+@import '_modules-widgets/_modules-widget-activity-two';
+@import '_modules-widgets/_modules-widget-activity-three';
+@import '_modules-widgets/_modules-widget-one_hybrid';
+@import '_modules-widgets/_modules-widget-account-invoice-two';
+@import '_modules-widgets/_modules-widget-card-one';
+@import '_modules-widgets/_modules-widget-four';
+@import '_modules-widgets/_modules-widget-card-two';
+@import '_modules-widgets/_modules-widget-five';
+@import '_modules-widgets/_modules-widget-two';
+@import '_modules-widgets/_modules-widget-one';
+@import '_modules-widgets/_modules-widget-three';
+@import '_modules-widgets/_modules-widget-chart-one';
+@import '_modules-widgets/_modules-widget-chart-two';
+@import '_modules-widgets/_modules-widget-table-one';
+@import '_modules-widgets/_modules-widget-activity-one';
+@import '_modules-widgets/_modules-widget-activity-four';
+@import '_modules-widgets/_modules-widget-account-invoice-one';
+@import '_modules-widgets/_modules-widget-table-two';
+@import '_modules-widgets/_modules-widget-table-three';
+
+
+
+
+
+
+
+
+
+
+
+/*
+    ===========================
+    /|\                     /|\
+    /|\                     /|\
+    /|\    Sales Section    /|\
+    /|\                     /|\
+    /|\                     /|\
+    ===========================
+*/
+
+.layout-spacing {
+  padding-bottom: 25px;
+}
+
+.widget {
+  position: relative;
+  padding: 20px;
+  border-radius: 6px;
+  border: none;
+  background: $m-color_10;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  box-shadow: 0 0.1px 0px rgba(0, 0, 0, 0.002), 0 0.2px 0px rgba(0, 0, 0, 0.003), 0 0.4px 0px rgba(0, 0, 0, 0.004), 0 0.6px 0px rgba(0, 0, 0, 0.004), 0 0.9px 0px rgba(0, 0, 0, 0.005), 0 1.2px 0px rgba(0, 0, 0, 0.006), 0 1.8px 0px rgba(0, 0, 0, 0.006), 0 2.6px 0px rgba(0, 0, 0, 0.007), 0 3.9px 0px rgba(0, 0, 0, 0.008), 0 7px 0px rgba(0, 0, 0, 0.01);
+
+  .widget-heading {
+    margin-bottom: 15px;
+  }
+
+  h5 {
+    letter-spacing: 0px;
+    font-size: 19px;
+    display: block;
+    color: $m-color_3;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .widget-content {}
+}
+
+.apexcharts-legend-text {
+  color: $m-color_4 !important;
+}
+
+.apexcharts-tooltip.dark {
+  background: $m-color_18 !important;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+
+  .apexcharts-tooltip-title {
+    background: $m-color_18 !important;
+    border-bottom: 1px solid $m-color_18;
+  }
+}
+
+
+
+/*
+    ==================
+        Widget
+    ==================
+*/
+
+.widget-one {
+  position: relative;
+  padding: 0;
+  border-radius: 6px;
+
+  /* height: 100%; */
+  border: none;
+  background-color: $m-color_10;
+
+  .widget-content {
+    font-size: 17px;
+  }
+
+  .w-numeric-value {
+    position: absolute;
+    display: flex;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+
+    .w-icon {
+      display: inline-block;
+      background: $secondary;
+      padding: 13px 12px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-self: center;
+      height: 45px;
+      width: 45px;
+      margin-right: 14px;
+    }
+
+    svg {
+      display: block;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+    }
+
+    .w-value {
+      font-size: 26px;
+      display: block;
+      color: $m-color_3;
+      font-weight: 600;
+      margin-bottom: -9px;
+      text-align: right;
+    }
+
+    .w-numeric-title {
+      font-size: 13px;
+      color: $m-color_4;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+  }
+
+  .apexcharts-canvas svg {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
+    =====================
+        Account Info
+    =====================
+*/
+
+.widget-account-invoice-one .invoice-box {
+  .acc-total-info {
+    padding: 0 0;
+    margin-bottom: 60px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed $m-color_4;
+  }
+
+  h5 {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: $primary;
+  }
+
+  .acc-amount {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: $m-color_14;
+  }
+
+  .inv-detail {
+    margin-bottom: 55px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed $m-color_4;
+  }
+
+  [class*="info-detail-"] {
+    &:not(.info-sub) {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin-bottom: 13px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+
+    &.info-sub {
+      .info-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 14px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .info-detail-sub {
+        margin-left: 9px;
+
+        p {
+          color: $m-color_6;
+          margin-bottom: 2px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .inv-action {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      transform: none;
+    }
+  }
+}
+
+/*
+    =====================
+        Account Info
+    =====================
+*/
+
+.widget-account-invoice-three {
+  padding: 0;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background: $m-color_10;
+  border: none;
+
+  .widget-heading {
+    padding: 24px 30px 63px 30px;
+    border-radius: 15px;
+    background-color: $m-color_18;
+    background-image: linear-gradient(-255deg, #154875 30%, $m-color_14 120%);
+    min-height: 213px;
+    height: 100%;
+
+    .wallet-usr-info {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        display: inline-block;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.40);
+        padding: 5px 12px 5px 6px;
+        border-radius: 21px;
+        position: relative;
+        font-size: 13px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+    }
+
+    .add {
+      align-self: center;
+
+      span {
+        padding: 6px;
+        border-radius: 12px;
+      }
+    }
+
+    span img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 18%);
+    }
+
+    .wallet-balance {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 37px;
+
+      p {
+        margin-bottom: 0;
+        align-self: center;
+        font-size: 19px;
+        color: #fff;
+      }
+    }
+
+    h5 {
+      font-size: 28px;
+      color: #fff;
+      margin-top: 0;
+      font-weight: 500;
+
+      .w-currency {
+        color: $m-color_4;
+        display: inline-block;
+      }
+    }
+  }
+
+  .widget-amount {
+    text-align: center;
+    margin-top: -48px;
+
+    .w-a-info {
+      display: inline-block;
+      padding: 12px 23px;
+      background: $m-color_19;
+      text-align: left;
+      border-radius: 6px;
+      width: 40%;
+      -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+
+      &.funds-received {
+        margin-right: 15px;
+      }
+    }
+
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .w-a-info {
+      svg {
+        width: 18px;
+        height: 18px;
+        float: right;
+      }
+
+      &.funds-received svg {
+        vertical-align: top;
+        color: $m-color_14;
+      }
+
+      &.funds-spent svg {
+        vertical-align: bottom;
+        color: $danger;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 0;
+      text-align: center;
+      background: $m-color_10;
+      border-radius: 6px;
+      margin-top: 10px;
+      padding: 3px 0;
+      color: $m-color_4;
+    }
+  }
+
+  .widget-content {
+    padding: 20px;
+    margin-top: 0;
+
+    .bills-stats {
+      margin-bottom: 24px;
+
+      span {
+        display: inline-block;
+        color: #fff;
+        background: rgba(0, 0, 0, 40%);
+        padding: 4px 12px 4px 20px;
+        border-radius: 21px;
+        position: relative;
+        font-size: 12px;
+        letter-spacing: 1px;
+        background-color: $m-color_12;
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 6px;
+          width: 6px;
+          background: white;
+          border-radius: 50%;
+          left: 9px;
+          top: 9.5px;
+        }
+      }
+    }
+  }
+
+  .invoice-list {
+    .inv-detail {
+      margin-bottom: 24px;
+    }
+
+    [class*="info-detail-"]:not(.info-sub) {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 13px;
+        align-self: center;
+
+        span {
+          &.w-currency {
+            font-size: 16px;
+            color: $m-color_6;
+            font-weight: 500;
+          }
+
+          &.bill-amount {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .inv-action {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        transform: none;
+        border: none;
+        font-size: 13px;
+        padding: 6px 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &.view-details {
+          border: none !important;
+          color: $info !important;
+          background: rgba(33, 150, 243, 0.169);
+        }
+
+        &.pay-now {
+          color: $m-color_14 !important;
+          background: rgba(0, 150, 136, 0.188);
+          border: none !important;
+        }
+
+        &.view-details:hover, &.pay-now:hover {
+          box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@import '_modules-widgets/_modules-widgets-media-query';
